@@ -1,0 +1,129 @@
+/* Global Styles for Forms */
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+form h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1D428A;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #1D428A;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #FFC72C;
+    outline: none;
+    background-color: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #1D428A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #FFC72C;
+    color: #1D428A;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #1D428A;
+    color: #fff;
+}
+
+/* Error and Success Messages */
+.error, .success {
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.error {
+    color: #fff;
+    background-color: #e74c3c;
+}
+
+.success {
+    color: #fff;
+    background-color: #2ecc71;
+}
+
+/* Link Styles */
+p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+p a {
+    color: #1D428A;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+p a:hover {
+    color: #FFC72C;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    form h2 {
+        font-size: 1.8rem;
+    }
+
+    .form-group input, button {
+        font-size: 1rem;
+    }
+}

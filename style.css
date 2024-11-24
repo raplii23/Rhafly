@@ -1,0 +1,745 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1D428A;
+    color: #ffffff;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+header {
+    background-color:#1D428A;
+    padding: 80px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+header h1 {
+    font-size: 3em;
+    font-weight: 550;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #FFC72C;
+    color: #2e2924;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar .nav-links li a {
+    color: #2e2924;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar .nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar .nav-links li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #1D428A;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        left: 0;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .navbar .nav-links li {
+        display: block;
+        text-align: center;
+    }
+
+    .navbar .menu-icon {
+        display: block;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Section Styling */
+section {
+    padding: 60px 0;
+    background-color: #1D428A;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Footer Styling */
+footer {
+    background-color:#FFC72C;
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-media {
+    margin-top: 10px;
+}
+
+footer .social-media a {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+footer .social-media a:hover {
+    color: #1D428A;
+}
+
+/* Section Styling */
+section {
+    padding: 80px 0;
+    background-color: #1D428A;
+}
+
+section:nth-child(even) {
+    background-color: #1D428A;
+}
+
+section h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #FFC72C;
+}
+
+section p {
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+/* Roster Cards */
+.roster-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.roster-card {
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.roster-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.roster-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.roster-card h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #000000;
+}
+
+.roster-card p {
+    font-size: 1.2em;
+    margin: 0;
+    color: #000000;
+}
+
+/* News Cards */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #2e2924;
+}
+
+.card p {
+    font-size: 1em;
+    margin: 0;
+    color: #453b30;
+}
+
+.slideshow-container {
+    width: 100%;
+    height: 100hv;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slideshow-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Schedule Section Styling */
+#schedule {
+    padding: 60px 20px;
+    background-color: #1D428A;
+    text-align: center;
+    color: #ffffff;
+}
+
+#schedule h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #FFC72C;
+}
+
+#schedule p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+#schedule img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Schedule Styling */
+@media (max-width: 768px) {
+    #schedule h2 {
+        font-size: 2em;
+    }
+
+    #schedule p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    #schedule h2 {
+        font-size: 1.8em;
+    }
+
+    #schedule p {
+        font-size: 0.9em;
+    }
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1D428A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FFC72C;
+    color: #000;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/*Full Roster Warriors*/
+/* Menambahkan section styling khusus untuk roster */
+#full-roster {
+    background-color: #1D428A;
+    padding: 80px 0;
+}
+
+#full-roster .section-title {
+    color: #FDB927;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.player-card {
+    position: relative;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.player-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.3s ease;
+}
+
+.player-card:hover .player-image {
+    transform: scale(1.05);
+}
+
+.player-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 20px;
+    background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 255, 255, 0.7) 50%,
+        transparent 100%
+    );
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.player-card:hover .player-info {
+    transform: translateY(-5px);
+}
+
+.player-name {
+    margin: 0;
+    text-align: left;
+}
+
+.first-name {
+    display: block;
+    font-size: 1.8rem;
+    color: #FDB927;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.last-name {
+    display: block;
+    font-size: 1.8rem;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.number {
+    display: block;
+    font-size: 2.8rem;
+    color: rgb(14, 14, 14);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+a {
+    font-size: size 1.2em;
+    font-weight: 600;
+    text-decoration: none;
+    color: #FDB927; /* warna default */
+}
+
+a:hover {
+    color:#FDB927; 
+}
+
+a:visited {
+    color:#1D428A ; /* warna untuk link yang sudah dikunjungi */
+}
+
+a:active {
+    color: #FDB927; /* warna saat link diklik */
+}
+
+.position {
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .roster-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    #full-roster {
+        padding: 60px 0;
+    }
+
+    #full-roster .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .roster-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .player-card {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    #full-roster .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 25px;
+    }
+
+    .roster-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .player-card {
+        height: 400px;
+    }
+
+    .first-name {
+        font-size: 1rem;
+    }
+
+    .last-name {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* Coaching Staff */
+#coaching-staff {
+    padding: 4rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #FDB927;
+    text-transform: uppercase;
+}
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.coach-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.coach-card:hover {
+    transform: translateY(-5px);
+}
+
+.coach-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    background-color: #E5E5E5;
+}
+
+.coach-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.coach-name {
+    margin-bottom: 0.5rem;
+}
+
+.first-name {
+    display: block;
+    font-size: 1rem;
+    color: #666;
+}
+
+.last-name {
+    display: block;
+    font-size: 1.25rem;
+    color: #FFB800;
+    font-weight: bold;
+}
+
+.title {
+    color: #1D428A;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.memorial {
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .staff-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+#social-discussion {
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #00274d; /* Background warna biru */
+    color: #ffc107; /* Warna teks kuning */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#social-discussion h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#thread-form textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#thread-form button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #ffc107;
+    color: #00274d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.thread {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.thread h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #007bff;
+}
+
+.thread p {
+    margin: 10px 0;
+}
+
+.thread small {
+    color: #555;
+}
+
+.reply {
+    margin-left: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #ddd;
+    margin-top: 10px;
+}
